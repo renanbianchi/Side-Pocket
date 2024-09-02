@@ -3,7 +3,8 @@
         <style>
             body, html {
                 margin: 0;
-                padding: 0;
+                padding: 50px;
+                background-color: blueviolet;
             }
         </style>
     </head>
@@ -18,5 +19,13 @@
             EJS_gameUrl = 'https://static.playemulator.io/uploads/games/202003/side-pocket.smc';
         </script>
         <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+        <script>
+            window.onload = function() {
+                var startButton = document.querySelector('.ejs_start_button');
+                if (startButton) {
+                    startButton.click();
+                }
+            };
+        </script>
     </body>
 </html>
