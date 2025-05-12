@@ -33,6 +33,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      - name: Inject env variable
+        run: |
+          sed "s|__SIDE_POCKET__|${{ secrets.SIDE_POCKET }}|g" env.template.js > env.js
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
